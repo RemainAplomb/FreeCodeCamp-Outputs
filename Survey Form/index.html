@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This web page is dedicated to honor Reverend Insanity.">
+    <title>Web Novel Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.0/css/all.css">
+</head>
+<body>
+    <section id="main-content">
+        <div class="page-container">
+            <header class="header">
+                <h1 id="title" class="text-center">Web Novel Survey Form</h1>
+                <p id="description" class="description text-center">
+                    Let us know your web novel preference!
+                </p>
+            </header>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <div class="textfield">
+                        <input id="name" class="textfield__input" type="text" required>
+                        <label for="name" class="textfield__label textfield__label_required"> Name</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <div class="textfield">
+                        <input id="email" class="textfield__input" type="email" required>
+                        <label for="email" class="textfield__label textfield__label_required"> Email</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                    <div class="textfield">
+                        <input id="number" class="textfield__input" type="text" min= "0" max= "120" required>
+                        <label for="number" class="textfield__label textfield__label_required" min="10" max="99"> Age</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p>Which genre do you like the most?</p>
+                    <select id="dropdown" name="role" class="form-control" required="">
+                        <option disabled="" selected="" value="">Select current role</option>
+                        <option value="sci-fi">Sci-fi</option>
+                        <option value="historical">Historical</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="romance">Romance</option>
+                        <option value="urban">Urban</option>
+                        <option value="horror">Horror/Thriller</option>
+                        <option value="xianxia">Xianxia</option>
+                        <option value="xuanhuan">Xuanhuan</option>
+                        <option value="preferNo">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <p>Would you recommend a web novel to a friend/loved one?</p>
+                    <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">Definitely</label>
+                    <label>
+                    <input name="user-recommend" value="maybe" type="radio" class="input-radio">Maybe</label>
+    
+                    <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio">Not sure</label>
+                </div>
+    
+                <div class="form-group">
+                    <p>What kind of web novel do you read?</p>
+                    <select id="most-like" name="mostLike" class="form-control" required="">
+                        <option disabled="" selected="" value="">Select an option</option>
+                        <option value="eastern">Eastern</option>
+                        <option value="western">Western</option>
+                        <option value="african">African</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <p>
+                        What would you like to see improved in the web novels?
+                        <span class="clue">(Check all that apply)</span>
+                    </p>
+    
+                    <label><input name="prefer" value="creativity" type="checkbox" class="input-checkbox">
+                        Creativity
+                    </label>
+                    <label><input name="prefer" value="update" type="checkbox" class="input-checkbox">
+                        Update rate
+                    </label>
+                    <label><input name="prefer" value="visualization" type="checkbox" class="input-checkbox">
+                        Visualization
+                    </label>
+                    <label><input name="prefer" value="writing-style" type="checkbox" class="input-checkbox">
+                        Writing Style
+                    </label>
+                    <label><input name="prefer" value="community" type="checkbox" class="input-checkbox">
+                        Community
+                    </label>
+                    <label><input name="prefer" value="accessibility" type="checkbox" class="input-checkbox">
+                        Accessibility
+                    </label>
+                    <label><input name="prefer" value="payment" type="checkbox" class="input-checkbox">
+                        Payment
+                    </label>
+                    <label><input name="prefer" value="interactivity" type="checkbox" class="input-checkbox">
+                        Interactivity
+                    </label>
+                    <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox">
+                        Wiki
+                    </label>
+                    <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">
+                        Forum
+                    </label>
+                    <label><input name="prefer" value="others" type="checkbox" class="input-checkbox">
+                        Others
+                    </label>
+                </div>
+    
+                <div class="form-group">
+                    <p>Any comments or suggestions?</p>
+                    <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+    
+                <div class="form-group button-div">
+                    <button type="submit" id="submit" class="submit-btn btn btn-animate1">
+                        SUBMIT
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

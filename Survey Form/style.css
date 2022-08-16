@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
+
+:root {
+    --clr-primary: #206ada;
+    --clr-secondary: #2F4858;
+    --clr-dark: #131212;
+    --clr-light: #FAFAEC;
+    --clr-light-2: #f9f9f9;
+    --clr-grey: #898989;
+    --clr-grey-2: #444444;
+
+    font-family: "Syncopate", monospace;
+    font-size: 16px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* TYPOGRAPHY */
+h5 {
+    font-size: clamp( 1rem, 2vw, 1.25rem);
+    margin: 0;
+    font-weight: 500;
+}
+
+h1 {
+    /* font-size: clamp( 2.2rem, 1rem + 3vw, 3.75rem); */
+    font-size: clamp( 1.25rem, 0.5rem + 3vw, 2rem);
+}
+
+h2 {
+    font-size: clamp( 1.25rem, 0.5rem + 3vw, 2rem);
+}
+
+p {
+    font-size: clamp( 0.8rem, 3vw, 0.9rem);
+}
+
+
+/* SELECT */
+select{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background: #ffffff;
+    font-weight: 400;
+    line-height: 24px;
+    outline: none;
+    transition: all 0.25s linear;
+    font-size: clamp( 0.8rem, 3vw, 0.9rem);
+    color: rgba(41, 40, 40, 0.753);
+}
+
+select option {
+    color: rgba(41, 40, 40, 0.753);
+}
+
+textarea{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 7rem;
+    padding-inline: 0.4rem;
+    padding-block: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background: #ffffff;
+    font-weight: 400;
+    line-height: 24px;
+    outline: none;
+    transition: all 0.25s linear;
+    font-size: clamp( 0.8rem, 3vw, 0.9rem);
+    resize: none;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+
+    font-size: clamp( 1rem, 3vw, 1.2rem);
+
+    border-radius: 10px;
+}
+
+.btn-animate1:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.submit-btn {
+    background-color: #37af65;
+    color: var(--clr-light);
+}
+
+
+#main-content{
+    /* width: 100%; */
+    /* max-width: 1920px; */
+    background-image: url("img/historical-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block: 2rem;
+}
+
+.page-container {
+    width: min(100%, 70rem);
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.664);
+    /* border: 1px solid #cccccc; */
+    border-radius: 10px;
+    /* padding-inline: 2rem; */
+    padding-block: 2rem;
+}
+
+.page-container header {
+    text-align: center;
+    color: var(--clr-light);
+    margin-bottom: 2rem;
+}
+
+.page-container form {
+    width: 90%;
+    margin: 0 auto;
+    color: var(--clr-light);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+}
+
+.form-group p {
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+/* TEXT FIELD */
+.textfield {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* .half-textfield {
+    width: 49%;
+} */
+
+.textfield label {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    /* top: 12px;
+    left: 15px; */
+    display: block;
+    font-size: clamp( 0.8rem, 3vw, 0.9rem);
+    /* line-height: 24px; */
+    color: rgba(77, 77, 77, 0.5);
+    user-select: none;
+    cursor: text;
+}
+
+.textfield .textfield__label_required:before {
+    position: relative;
+    top: -0.1em;
+    left: -0.1em;
+    display: inline-block;
+    content: "*";
+    color: #d0011b;
+}
+
+.textfield input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.2rem;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background: #ffffff;
+    font-weight: 400;
+    font-size: clamp( 0.8rem, 3vw, 0.9rem);
+    line-height: 24px;
+    outline: none;
+    transition: all 0.25s linear;
+}
+
+.textfield input:focus {
+    border-color: #3a82c6;
+}
+
+.textfield input:disabled {
+    border-color: #e6e6e6;
+    background: #f9fafb;
+}
+
+/* // hide original placeholder */
+.textfield input::placeholder {
+    color: transparent;
+}
+
+.textfield input:focus + label,
+.textfield input:valid + label{
+    display: none;
+}
+
+
+.button-div {
+    margin-block: 1rem;
+    z-index: 10;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
